@@ -65,6 +65,7 @@ public class CommandManager {
         Thread.sleep(200);
     }
 
-
-
+    public HashMap<String, Command> getCommands() {
+        return commands;
+    }
 }

@@ -1,9 +1,6 @@
 package com.mogli.impprojekt;
 
-import com.mogli.impprojekt.commands.CommandManager;
-import com.mogli.impprojekt.commands.DebugCMD;
-import com.mogli.impprojekt.commands.ExitCMD;
-import com.mogli.impprojekt.commands.PrefixCMD;
+import com.mogli.impprojekt.commands.*;
 import com.mogli.impprojekt.utils.ConfigManager;
 import com.mogli.impprojekt.utils.ConsoleManager;
 import com.mogli.impprojekt.utils.ErrorMessage;
@@ -44,6 +41,7 @@ public class Main {
         commandManager.registerCommand("exit", new ExitCMD());
         commandManager.registerCommand("debug", new DebugCMD());
         commandManager.registerCommand("prefix", new PrefixCMD());
+        commandManager.registerCommand("help", new HelpCMD());
         System.out.println("[COMMANDS] All Commands loaded.\n");
     }
 
