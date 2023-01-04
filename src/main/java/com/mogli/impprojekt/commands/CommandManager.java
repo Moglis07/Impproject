@@ -22,7 +22,7 @@ public class CommandManager {
         commands = new HashMap<>();
     }
 
-    public boolean runCommand(String command) throws IOException {
+    public boolean runCommand(String command) throws IOException, ClassNotFoundException {
 
         if(!Main.waitingOnAnswer) {
             if(command.startsWith((String) configManager.get("prefix"))) {

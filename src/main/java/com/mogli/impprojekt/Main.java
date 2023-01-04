@@ -1,11 +1,13 @@
 package com.mogli.impprojekt;
 
 import com.mogli.impprojekt.commands.*;
+import com.mogli.impprojekt.commands.huffman.HufmanCMD;
 import com.mogli.impprojekt.utils.ConfigManager;
 import com.mogli.impprojekt.utils.ConsoleManager;
 import com.mogli.impprojekt.utils.ErrorMessage;
 
 import java.io.IOException;
+
 
 public class Main {
 
@@ -14,7 +16,7 @@ public class Main {
     private static ConsoleManager consoleManager;
     public static boolean waitingOnAnswer;
 
-    public static void main(String[] args) throws IOException, InterruptedException {
+    public static void main(String[] args) throws IOException, InterruptedException, IOException {
         configManager = new ConfigManager();
         commandManager = new CommandManager();
         consoleManager = new ConsoleManager();
@@ -42,6 +44,7 @@ public class Main {
         commandManager.registerCommand("debug", new DebugCMD());
         commandManager.registerCommand("prefix", new PrefixCMD());
         commandManager.registerCommand("help", new HelpCMD());
+        commandManager.registerCommand("huffman", new HufmanCMD());
         System.out.println("[COMMANDS] All Commands loaded.\n");
     }
 

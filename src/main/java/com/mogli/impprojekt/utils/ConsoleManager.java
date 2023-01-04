@@ -39,6 +39,8 @@ public class ConsoleManager {
                     }
                 } catch (IOException e) {
                     e.printStackTrace();
+                } catch (ClassNotFoundException e) {
+                    throw new RuntimeException(e);
                 }
 
             }
